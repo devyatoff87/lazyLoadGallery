@@ -8,12 +8,11 @@
 
 
 .intersect-me {
-    min-height: 200px;
+    min-height: 250px;
     img {
         opacity: 0;
         position: relative;
         left: 0;
-        transition: 1.2s ease-out; 
         filter: blur(1);
         bottom: -27%;
         width: 100%;

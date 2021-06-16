@@ -22,6 +22,11 @@ createColumns();
 let imgColumns = document.querySelectorAll('.img-column');
 let imgsPerColumn = Math.floor(imgArray.length / imgColumns.length);
 
+const getRand = (max, min) => {
+    let a = Math.random() * (max - min) + min;
+    return a.toFixed(2);
+}
+
 const createImgs = () => {
     let k = 0;
     let m = 0;
@@ -32,6 +37,8 @@ const createImgs = () => {
             let img = document.createElement('img');
             img.dataset.src = imgArray[k++];
             img.src = "";
+
+            img.setAttribute('style', 'transition: ' + getRand(1.7, 0.7) + 's ease-out')
 
             item.append(img);
             imgColumns[m].append(item);
